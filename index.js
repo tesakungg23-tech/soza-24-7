@@ -7,18 +7,11 @@ const client = new Discord.Client({
 const keepAlive = require("./server.js");
 keepAlive();
 
-const applicationId = process.env["APPLICATION_ID"];
-
 client.on("ready", async () => {
   console.clear();
   console.log(`${client.user.tag} - rich presence started!`);
 
-  if (!applicationId) {
-    throw new Error("APPLICATION_ID is required for Rich Presence with a large image.");
-  }
-
   const r = new Discord.RichPresence(client)
-    .setApplicationId(applicationId)
     .setType("STREAMING")
     .setURL("https://www.twitch.tv/discord") // Must be a YouTube or Twitch stream link
     .setName("soza")
