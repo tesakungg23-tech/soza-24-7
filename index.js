@@ -12,7 +12,7 @@ client.on("ready", async () => {
   console.log(`${client.user.tag} - rich presence started!`);
 
   const r = new Discord.RichPresence(client)
-    .setApplicationId("1426964594215227456")
+    .setApplicationId("1015128735416061952")
     .setType("STREAMING")
     .setURL("https://www.twitch.tv/discord") // Must be a YouTube or Twitch stream link
     .setName("soza")
